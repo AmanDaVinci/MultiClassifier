@@ -21,6 +21,9 @@ m = size(X, 1);
 rand_indices = randperm(m);
 sel = X(rand_indices(1:100), :);
 
+% Full screen figure image
+figure('Units','normalized','Position',[0 0 1 1])
+
 displayData(sel);
 
 fprintf('Program paused. Press enter to continue.\n');
