@@ -42,10 +42,11 @@ lambda = 0.1;
 fprintf('Program paused. Press enter to continue.\n');
 pause;
 
-
 %% ================ Part 3: Predict for One-Vs-All ================
 %  After ...
 pred = predictOneVsAll(all_theta, X);
 
 fprintf('\nTraining Set Accuracy: %f\n', mean(double(pred == y)) * 100);
 
+% Save the learned weights through training
+save('learnedTheta.mat', 'all_theta');
