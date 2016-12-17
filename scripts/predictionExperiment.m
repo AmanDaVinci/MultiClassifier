@@ -19,6 +19,9 @@ m = size(X, 1);
 rand_indices = randperm(m);
 sel = X(rand_indices(1), :);
 
+% Full screen figure image
+figure('Units','normalized','Position',[0 0 1 1])
+
 % Display the image
 displayData(sel);
 
